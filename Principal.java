@@ -10,15 +10,17 @@ public class Principal
         d = sc.nextInt();
         System.out.println("Ingrese el punto a visualizar del 1 al 11");
         opc = sc.nextInt();
-        switch (sc) {
+        switch (opc) {
             case 1:
                 System.out.println("Es el punto 1");
+                punto1 p1 = new punto1();
+                int suma = p1.SumaMatriz();
                 break;
         
             default:
             System.out.println("Pagina en mantenimiento");
                 break;
         }
-        
+
     }
 }
