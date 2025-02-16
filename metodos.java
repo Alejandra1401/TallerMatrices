@@ -35,6 +35,88 @@ public class metodos
         }
         return sum;
     }
-
+    public int NumeroMayor (int[][] m)
+    {
+        int nmy = 0;
+        for( int i = 0; i < m.length; i ++)
+        {
+            for( int j = 0; j < m.length; j ++)
+            {
+                if (m[i][j] > nmy) 
+                {
+                    nmy = m[i][j];
+                }
+            }
+        }
+        return nmy;
+    }
+    public int[] mostrarposicion ( int matriz[][])
+    {
+        int[] pos = new int[2];
+        int nmy =0;
+        for( int i = 0; i < matriz.length; i ++)
+        {
+            for( int j = 0; j < matriz.length; j ++)
+            {
+                if (matriz[i][j] > nmy) 
+                {
+                    nmy = matriz[i][j];
+                    pos[0] = i;
+                    pos[1] = j;
+                
+                }
+            }
+        }
+        return pos;
+    }
+    public void sumafilasYColumn ( int [][] matriz, int d)
+    {
+        int acumCol, acumFilas;
+        int [] vectFilas = new int[d];
+        int [] vectCol = new int[d];
+        for( int i = 0; i < matriz.length; i ++)//recorrido por filas
+        {
+            acumFilas =0;
+            for( int j = 0; j < matriz.length; j ++)
+            {
+                acumFilas += matriz[i][j];
+            }
+            vectFilas[i] = acumFilas;
+            System.out.println("La suma de la fila " + i + " es " + vectFilas[i]);
+        }
+        for( int j = 0; j < matriz.length; j ++)//recorrido por columnas
+        {
+            acumCol = 0;
+            for( int i = 0; i < matriz.length; i ++)
+            {
+                acumCol += matriz[i][j];
+            }
+            vectCol[j] = acumCol;
+            System.out.println("La suma de la columna " + j + " es " + vectCol[j]);
+        }  
+        
+    }
+    public void sumMaxCol ( int[][] matriz, int d)
+    {
+        int acumCo;
+        int [] vectCo = new int[d];
+       
+        int mySum =0, indMy = 0;
+        for( int j = 0; j < matriz.length; j ++)//recorrido por columnas
+        {
+            acumCo = 0;
+            for( int i = 0; i < matriz.length; i ++)
+            {
+                acumCo += matriz[i][j];
+            }
+            vectCo[j] = acumCo;
+            if (acumCo > mySum) 
+            {
+                mySum = acumCo;
+                indMy = j; 
+            }
+        }  
+        System.out.println("La columna con mayor suma es " + indMy + " y el valor es " + mySum);
+    }
     
 }
