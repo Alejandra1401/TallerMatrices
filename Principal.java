@@ -40,6 +40,10 @@ public class Principal
                 System.out.println("Es el punto 7");
                 punto7 p7 = new punto7();
                 p7.numCeroPosNeg(d);
+            case 8:
+                System.out.println("Es el punto 8");
+                punto8 p8 = new punto8();
+                p8.sumFilaYmayEncontIndi(d);
             default:
             System.out.println("Pagina en mantenimiento");
                 break;

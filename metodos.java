@@ -124,6 +124,22 @@ public class metodos
         }  
         
     }
+    public int[] SumFila (int[][]m, int d)
+    {
+        int [] vectFil = new int[d];
+        int acumFil;
+        for( int i = 0; i < m.length; i ++)//recorrido por filas
+        {
+            acumFil =0;
+            for( int j = 0; j < m.length; j ++)
+            {
+                acumFil += m[i][j];
+            }
+            vectFil[i] = acumFil; 
+        }
+        return vectFil;
+
+    }
     public void sumMaxCol ( int[][] matriz, int d)
     {
         int acumCo;
