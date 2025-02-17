@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class metodos 
 {
+    Scanner sc = new Scanner(System.in);
     public int[][] llenarMatriz(int[][] m)
     {
         for(int i =0; i< m.length; i++)
@@ -10,6 +13,31 @@ public class metodos
             }
         }
         return m;
+    }
+    public int[][] llenadoMatManual(int d)
+    {
+        int[][] mat = new int[d][d];
+        for (int i = 0; i < mat.length; i++) 
+        {
+            for (int j = 0; j < mat.length; j++) 
+            {
+                System.out.print("Ingrese valores enteros para llenar la matriz");
+                mat[i][j] = sc.nextInt();
+            }
+            
+        }
+        return mat;
+    }
+    public void mostrarMatManual(int[][] mat)
+    {
+        for(int i =0; i< mat.length; i++)
+        {
+            for(int j =0; j< mat.length; j++)
+            {
+               System.out.print(" - " + mat[i][j] + " - ");
+            }
+            System.out.println();
+        }
     }
     public void MostrarMatriz(int[][] m)
     {
