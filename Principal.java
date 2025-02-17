@@ -32,6 +32,10 @@ public class Principal
                 System.out.println("Es el punto 5");
                 punto5 p5 = new punto5();
                 p5.vector(d);
+            case 6:
+                System.out.println("Es el punto 6");
+                punto6 p6 = new punto6();
+                p6.sumaVectFyC(d);
             default:
             System.out.println("Pagina en mantenimiento");
                 break;
