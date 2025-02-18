@@ -20,30 +20,42 @@ public class Principal
                 System.out.println("Es el punto 2");
                 punto2 p2 = new punto2();
                 p2.NumeroMayor(d);
+                break;
             case 3:
                 System.out.println("Es el punto 3");
                 punto3 p3 = new punto3();
                 p3.SumFil(d);
+                break;
             case 4:
                 System.out.println("Es el punto 4");
                 punto4 p4 = new punto4();
                 p4.MaxSumCol(d);
+                break;
             case 5:
                 System.out.println("Es el punto 5");
                 punto5 p5 = new punto5();
                 p5.vector(d);
+                break;
             case 6:
                 System.out.println("Es el punto 6");
                 punto6 p6 = new punto6();
                 p6.sumaVectFyC(d);
+                break;
             case 7:
                 System.out.println("Es el punto 7");
                 punto7 p7 = new punto7();
                 p7.numCeroPosNeg(d);
+                break;
             case 8:
                 System.out.println("Es el punto 8");
                 punto8 p8 = new punto8();
                 p8.sumFilaYmayEncontIndi(d);
+                break;
+            case 9:
+                System.out.println("Es el punto 9");
+                punto9 p9 = new punto9();
+                p9.punto9(d);
+                break;
             default:
             System.out.println("Pagina en mantenimiento");
                 break;

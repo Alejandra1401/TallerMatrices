@@ -78,10 +78,10 @@ public class metodos
         }
         return nmy;
     }
-    public int[] mostrarposicion ( int matriz[][])
+    public int[] mostrarposicionmayor ( int matriz[][])
     {
         int[] pos = new int[2];
-        int nmy =0;
+        int nmy = matriz[0][0];
         for( int i = 0; i < matriz.length; i ++)
         {
             for( int j = 0; j < matriz.length; j ++)
@@ -89,6 +89,25 @@ public class metodos
                 if (matriz[i][j] > nmy) 
                 {
                     nmy = matriz[i][j];
+                    pos[0] = i;
+                    pos[1] = j;
+                
+                }
+            }
+        }
+        return pos;
+    }
+    public int[] mostrarposicionMenor ( int matriz[][])
+    {
+        int[] pos = new int[2];
+        int nmn = matriz[0][0];
+        for( int i = 0; i < matriz.length; i ++)
+        {
+            for( int j = 0; j < matriz.length; j ++)
+            {
+                if (matriz[i][j] < nmn) 
+                {
+                    nmn = matriz[i][j];
                     pos[0] = i;
                     pos[1] = j;
                 
@@ -186,6 +205,36 @@ public class metodos
             vecSumFyC[d + j] = acumC;
         }
         return vecSumFyC;
+    }
+    public int MenenMat(int[][] m, int d)
+    {
+        int mn = m[0][0];
+        for (int i = 0; i < m.length; i++) 
+        {
+            for (int j = 0; j < m.length; j++) 
+            {
+                if( m[i][j] < mn)
+                {
+                    mn = m[i][j];
+                }
+            }
+        }
+        return mn;
+    }
+    public int MayenMat ( int[][] m, int d )
+    {
+        int my = m[0][0];
+        for (int i = 0; i < m.length; i++) 
+        {
+            for (int j = 0; j < m.length; j++) 
+            {
+                if(m[i][j] > my)
+                {
+                    my = m[i][j];
+                }
+            }
+        }
+        return my;
     }
     
 }
