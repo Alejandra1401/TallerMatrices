@@ -28,6 +28,24 @@ public class metodos
         }
         return mat;
     }
+    public float[][] llenadoMatrParaleloIrreg()
+    {
+        int n, m;
+        System.out.println("Ingrese la cantidad de personas");
+        n = sc.nextInt();
+        System.out.println("Ingrese la cantidad de examenes");
+        m = sc.nextInt();
+        float[][] mat = new float[n][m];
+        for (int i = 0; i < mat.length; i++) 
+        {
+            for (int j = 0; j < mat.length; j++) 
+            {
+                System.out.print("Ingrese la nota para la persona" + (i+1) + " en el examen " + (j+1));
+                mat[i][j] = sc.nextFloat();
+            }
+        }
+        return mat;
+    }
     public void mostrarMatManual(int[][] mat)
     {
         for(int i =0; i< mat.length; i++)
