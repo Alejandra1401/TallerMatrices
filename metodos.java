@@ -28,23 +28,64 @@ public class metodos
         }
         return mat;
     }
-    public float[][] llenadoMatrParaleloIrreg()
+    public double[][] llenadoMatrParaleloIrreg()
     {
         int n, m;
         System.out.println("Ingrese la cantidad de personas");
         n = sc.nextInt();
         System.out.println("Ingrese la cantidad de examenes");
         m = sc.nextInt();
-        float[][] mat = new float[n][m];
-        for (int i = 0; i < mat.length; i++) 
+        double[][] mat = new double[n][m];
+        for (int i = 0; i < n; i++) 
         {
-            for (int j = 0; j < mat.length; j++) 
+            for (int j = 0; j < m; j++) 
             {
-                System.out.print("Ingrese la nota para la persona" + (i+1) + " en el examen " + (j+1));
+                System.out.print("Ingrese la nota para la persona " + (i + 1) + " en el examen " + ( j + 1 ));
                 mat[i][j] = sc.nextFloat();
             }
         }
         return mat;
+    }
+    public double[] sumFi (double[][] m)
+    {
+        double[] vecSFil = new double[m.length];
+        double acufil;
+        for (int i = 0; i < m.length; i++) 
+        {
+            acufil = 0;
+            for (int j = 0; j < m.length; j++) 
+            {
+                acufil+= m[i][j];
+            }
+            vecSFil[i] = acufil;
+        }
+        return vecSFil;
+    }
+    public void mostrarMatManualParIrreg(double[][] mat)
+    {
+        for(int i =0; i< mat.length; i++)
+        {
+            for(int j =0; j< mat[0].length; j++)
+            {
+               System.out.print(" - " + mat[i][j] + " - ");
+            }
+            System.out.println();
+        }
+    }
+    public double[] promFila(double[][] ma)
+    {
+        double[] promFil = new double[ma.length];
+        for (int i = 0; i < ma.length; i++) 
+        {
+            double acumSu = 0;
+            for (int j = 0; j < ma[0].length; j++) 
+            {
+                acumSu += ma[i][j];
+            }
+            promFil[i] = acumSu/ma[i].length;//la division con [i] para que funcione ya sea matriz cuadrada o irregular
+            
+        }
+        return promFil;
     }
     public void mostrarMatManual(int[][] mat)
     {
@@ -175,7 +216,6 @@ public class metodos
             vectFil[i] = acumFil; 
         }
         return vectFil;
-
     }
     public void sumMaxCol ( int[][] matriz, int d)
     {

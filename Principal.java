@@ -56,6 +56,11 @@ public class Principal
                 punto9 p9 = new punto9();
                 p9.punto9(d);
                 break;
+            case 11:
+                System.out.println("Es el punto 11");
+                punto11 p11 = new punto11();
+                p11.PromCalific();
+                break;
             default:
             System.out.println("Pagina en mantenimiento");
                 break;
